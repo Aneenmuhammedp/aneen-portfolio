@@ -10,6 +10,12 @@
 
         @foreach($projects as $project)
 
+
+        @if($project->image)
+    <img src="{{ asset('images/projects/' . basename($project->image)) }}"
+         alt="{{ $project->title }}">
+@endif
+
             <article>
 
                 @if($project->image)
